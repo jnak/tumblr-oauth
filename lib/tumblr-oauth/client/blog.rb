@@ -12,6 +12,14 @@ module TumblrOAuth
       def blog_followers
         blog_request(:get, 'followers', :oauth)
       end
+      
+      # options[:caption] The user-supplied caption, HTML allowed
+      # options[:link] The "click-through URL" for the photo
+      # options[:type] => "photo"
+      # options[:source] The photo source url 
+      def blog_post(options={})
+        post(path_with_blog_host('post'), options)
+      end
 
       private
 
