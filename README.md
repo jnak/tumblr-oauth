@@ -24,7 +24,7 @@ TumblrOAuth.configure do |config|
   config.consumer_secret    = 'consumer_secret'
 end
 
-tumblr_client = TumblrOAuth::Client(
+tumblr_client = TumblrOAuth::Client.new(
   :oauth_token        => 'oauth_token',
   :oauth_token_secret => 'oauth_secret',
   :blog_host          => 'blog_host_name' # For example "test.tumblr.com"
